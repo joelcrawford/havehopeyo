@@ -1,0 +1,119 @@
+$c-bg-deep: #664e3d; /* #c6a88d; /* #835a49; */
+$c-bg: #e6d9cf; /* #efefef; /*#222;  /* #d4b8ac; */
+$c-text: #5f5045; /* #222; /*#efefef; /* #835a49; */
+$c-border: #222;
+$url-banner: '../img/the-desert.jpg';
+$c-border-test: 1px dashed #fff;
+$shadow: 10px 10px 5px grey;
+
+$xlarge: 1281px;
+$large: 1053px;
+$medium: 737px;
+$small: 481px;
+$xsmall: 361px;
+
+body {
+  padding: 0.4em; 
+  background: $c-bg-deep;
+  font-family: 'Noto Serif', serif;
+  text-align: left;
+  color: $c-text;
+
+}
+h1 {
+  font-size: 4em;
+}
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  min-height: calc(100vh - 0.8em);
+}
+
+.wrapper > * {
+  padding: 1em;
+  flex: 1 100%;
+}
+
+.header {
+  flex: 1 100%;
+  display: flex;
+  background: $c-bg;
+  border: $c-border-test;
+  padding: 0 3em;
+  position: relative;
+  p {
+    font-size: 1.6em;
+  }
+  .ab-logo {
+    position: absolute;
+    bottom: -3em;
+    right: 2em;
+    max-width: 20%;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+  }
+}
+.banner {
+  background: url($url-banner);
+  background-size: cover;
+  min-height: 400px;
+  background-position: center top;
+}
+
+.footer {
+  order: 3;
+  background: $c-bg;
+  padding: 0 3em;
+}
+
+
+
+.col-primary {
+  flex: 3 0px;
+  order: 1;
+  padding: 0 3em;
+  background: $c-bg;
+  border: $c-border-test;
+}
+
+.col-secondary {
+  order: 2;
+  padding: 0 3em;
+  background: $c-bg;
+  border: $c-border-test;
+}
+
+.aside { 
+  flex: 3 0 0; 
+}
+
+@media screen and (max-width: $large) {
+  h1 {
+    font-size: 2em;
+  }
+  .header {
+    p {
+      font-size: 1.2em;
+    }
+  }
+}
+
+@media screen and (max-width: $medium) {
+  h1 {
+    font-size: 1.6em;
+  }
+  .header {
+    p {
+      font-size: 1em;
+    }
+  }
+  .aside {
+    flex: none;
+  }
+}
+@media screen and (max-width: $small) {
+  
+}
+
+
+
