@@ -41,11 +41,13 @@ function App() {
         <p>{data.random}</p> 
           <img src={logo} alt="logo" />
       </section>
-      <section className="aside col-secondary">
+      <section className="col-secondary">
         <p>{data.random}</p> 
       </section>
       <footer className="footer">
+        <div className="col-primary">
         <p>&copy; {data.footer}</p> 
+        </div>
       </footer>
     </div>
   )
