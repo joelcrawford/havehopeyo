@@ -10,22 +10,33 @@ const data = {
   random: `Pellentesque habitant morbi tristique senectus et netus et malesuada 
     fames ac turpis egestas. Vestibulum tortor quam, 
     feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit 
-    amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.`
+    amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.`,
+  footer: `2015 Have Hope Yo.`
 }
 
 function App() {
   return (
     <div className="wrapper">
-      <header className="header">
-        <section className="col-primary">
-          <h1>{data.slogan}</h1>
+      {/* <header className="header">
+        <div className="col-3">
+          <h1 className="slogan">{data.slogan}</h1>
           <p>{data.subslogan}</p>
-        </section>
-        <section className="col-secondary">
-          <img className="ab-logo" src={hhy} alt="logo" width="100px" />
-        </section>
-      </header>
+        </div>
+        <div className="col-1">
+          <img className="ab-logo" src={hhy} alt="logo" />
+        </div>
+      </header> */}
+      
       <section className="banner"></section>
+      <header className="header">
+        <div className="col-3">
+          <h1 className="slogan">{data.slogan}</h1>
+          <p>{data.subslogan}</p>
+        </div>
+        <div className="col-1">
+          <img className="ab-logo" src={hhy} alt="logo" />
+        </div>
+      </header>
       <section className="col-primary">
         <p>{data.random}</p> 
           <img src={logo} alt="logo" />
@@ -34,7 +45,7 @@ function App() {
         <p>{data.random}</p> 
       </section>
       <footer className="footer">
-        <p>{data.random}</p> 
+        <p>&copy; {data.footer}</p> 
       </footer>
     </div>
   )

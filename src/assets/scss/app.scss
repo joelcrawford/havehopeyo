@@ -1,9 +1,12 @@
-$c-bg-deep: #664e3d; /* #c6a88d; /* #835a49; */
+$c-bg-deep: #413737; /* #664e3d; /*#664e3d; /* #c6a88d; /* #835a49; */
 $c-bg: #e6d9cf; /* #efefef; /*#222;  /* #d4b8ac; */
-$c-text: #5f5045; /* #222; /*#efefef; /* #835a49; */
+$c-text: #4e3f33; /* #3a3a3a; /* #5f5045; /* #222; /*#efefef; /* #835a49; */
+$c-text-header: #664e3d;
+$c-text-light: #e6d9cf;
 $c-border: #222;
-$url-banner: '../img/the-desert.jpg';
+$url-banner: '../img/me-winded-in-desert.jpg';
 $c-border-test: 1px dashed #fff;
+$c-border-test2: 1px dashed blue;
 $shadow: 10px 10px 5px grey;
 
 $xlarge: 1281px;
@@ -21,7 +24,11 @@ body {
 
 }
 h1 {
-  font-size: 4em;
+  color: $c-text-header;
+  font-size: 6em;
+  &.slogan {
+    margin-top: 1em;
+  }
 }
 .wrapper {
   display: flex;  
@@ -46,23 +53,27 @@ h1 {
   }
   .ab-logo {
     position: absolute;
-    bottom: -3em;
-    right: 2em;
-    max-width: 20%;
+    top: -58px; /* bottom: -56px; */
+    width: 100px;
+    right: 56px;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
   }
 }
+
 .banner {
   background: url($url-banner);
   background-size: cover;
   min-height: 400px;
-  background-position: center top;
+  background-position: center center;
 }
 
 .footer {
   order: 3;
-  background: $c-bg;
+  background: $c-bg-deep;
+  color: $c-text-light;
+  font-size: 0.8em;
+  letter-spacing: 0.04em;
   padding: 0 3em;
 }
 
@@ -80,7 +91,17 @@ h1 {
   order: 2;
   padding: 0 3em;
   background: $c-bg;
+  border: $c-border-test2;
+}
+
+.col-3 {
+  flex: 4 0 0;
   border: $c-border-test;
+}
+
+.col-1 {
+  flex: 1 0 0;
+  border: $c-border-test2;
 }
 
 .aside { 
@@ -89,7 +110,7 @@ h1 {
 
 @media screen and (max-width: $large) {
   h1 {
-    font-size: 2em;
+    font-size: 3em;
   }
   .header {
     p {
