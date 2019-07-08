@@ -17,18 +17,7 @@ const data = {
 function App() {
   return (
     <div className="wrapper">
-      {/* <header className="header">
-        <div className="col-3">
-          <h1 className="slogan">{data.slogan}</h1>
-          <p>{data.subslogan}</p>
-        </div>
-        <div className="col-1">
-          <img className="ab-logo" src={hhy} alt="logo" />
-        </div>
-      </header> */}
-      
-      <section className="banner"></section>
-      <header className="header">
+     <header className="header">
         <div className="col-3">
           <h1 className="slogan">{data.slogan}</h1>
           <p>{data.subslogan}</p>
@@ -37,6 +26,8 @@ function App() {
           <img className="ab-logo" src={hhy} alt="logo" />
         </div>
       </header>
+      <section className="banner"></section>
+      
       <section className="col-primary">
         <p>{data.random}</p> 
           <img src={logo} alt="logo" />

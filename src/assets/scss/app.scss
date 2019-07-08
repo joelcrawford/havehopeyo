@@ -1,5 +1,6 @@
 $c-bg-deep: #413737; /* #664e3d; /*#664e3d; /* #c6a88d; /* #835a49; */
 $c-bg: #e6d9cf; /* #efefef; /*#222;  /* #d4b8ac; */
+$c-highlight: #ff977d;
 $c-text: #4e3f33; /* #3a3a3a; /* #5f5045; /* #222; /*#efefef; /* #835a49; */
 $c-text-header: #664e3d;
 $c-text-light: #e6d9cf;
@@ -31,13 +32,14 @@ h1 {
   color: $c-text-header;
   font-size: 6em;
   &.slogan {
-    margin-top: 1em;
+    margin-top: 0.2em;
   }
 }
 .wrapper {
   display: flex;  
   flex-flow: wrap;
   flex-direction: row;
+  flex-grow: 1;
   min-height: calc(100vh - 0.8em);
 }
 
@@ -61,7 +63,7 @@ h1 {
   }
   .ab-logo {
     position: absolute;
-    top: -58px; /* bottom: -56px; */
+    bottom: -44px; /* top: -58px; */ 
     width: 100px;
     right: 56px;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
@@ -74,9 +76,12 @@ h1 {
   background-size: cover;
   min-height: 400px;
   background-position: center center;
+  border-bottom: 0.2em solid $c-highlight;
+  border-top: 0.2em solid $c-highlight;
 }
 
 .footer {
+  border-top: 0.2em solid $c-highlight;
   order: 3;
   font-size: 0.8em;
   letter-spacing: 0.04em;
@@ -112,6 +117,12 @@ h1 {
   border: $c-border-test2;
 }
 
+@media screen and (max-width: $xlarge) {
+  h1 {
+    font-size: 4.6em;
+  }
+}
+
 @media screen and (max-width: $large) {
   h1 {
     font-size: 3em;
@@ -133,7 +144,7 @@ h1 {
   }
   .col-secondary {
     flex-basis: calc(100% - 2em);
-    flex-grow: 1;
+    
   }
 
   .header {
