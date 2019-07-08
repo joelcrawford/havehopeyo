@@ -1,24 +1,4 @@
-$c-bg-deep: #413737; /* #664e3d; /*#664e3d; /* #c6a88d; /* #835a49; */
-$c-bg: #e6d9cf; /* #efefef; /*#222;  /* #d4b8ac; */
-$c-highlight: #ff977d;
-$c-text: #4e3f33; /* #3a3a3a; /* #5f5045; /* #222; /*#efefef; /* #835a49; */
-$c-text-header: #664e3d;
-$c-text-light: #e6d9cf;
-$c-border: #222;
-$url-banner: '../img/me-winded-in-desert.jpg';
-$c-border-test: none; /*1px dashed #fff; */
-$c-border-test2: none; /*1px dashed blue; */
-$shadow: 10px 10px 5px grey;
-
-$pad-body: 0.4em;
-$pad-desk: 3em;
-$pad-mobile: 1em;
-
-$xlarge: 1281px;
-$large: 1053px;
-$medium: 737px;
-$small: 481px;
-$xsmall: 361px;
+@import './app-vars.scss';
 
 body {
   padding: $pad-body;
@@ -48,7 +28,7 @@ h1 {
   flex: 1 100%;
 }
 
-.col-1, .col-3, .col-primary, .col-secondary {
+.col-header-main, .col-header-side, .col-primary, .col-secondary {
   padding: $pad-desk;
 }
 
@@ -74,7 +54,7 @@ h1 {
 .banner {
   background: url($url-banner);
   background-size: cover;
-  min-height: 400px;
+  min-height: 80vh;
   background-position: center center;
   border-bottom: 0.2em solid $c-highlight;
   border-top: 0.2em solid $c-highlight;
@@ -91,8 +71,6 @@ h1 {
   }
 }
 
-
-
 .col-primary {
   flex: 3 0px;
   order: 1;
@@ -107,12 +85,12 @@ h1 {
   border: $c-border-test2;
 }
 
-.col-3 {
+.col-header-main {
   flex: 4 0 0;
   border: $c-border-test;
 }
 
-.col-1 {
+.col-header-side {
   flex: 1 0 0;
   border: $c-border-test2;
 }
@@ -138,24 +116,43 @@ h1 {
   h1 {
     font-size: 1.6em;
   }
-  .col-1, .col-3, .col-primary, .col-secondary {
-    padding: $pad-mobile;
-    
-  }
-  .col-secondary {
-    flex-basis: calc(100% - 2em);
-    
-  }
-
   .header {
     p {
       font-size: 1em;
     }
+    .ab-logo {
+      position: absolute;
+      bottom: -36px; /* top: -58px; */ 
+      width: 80px;
+      right: 16px;
+      -webkit-filter: drop-shadow(3px 3px 3px #222);
+      filter: drop-shadow(3px 3px 3px #222);
+    }
+  }
+  .col-header-main, .col-header-side, .col-primary, .col-secondary {
+    padding: $pad-mobile;
+    
+  }
+  .col-secondary, .col-primary {
+    flex-basis: calc(100% - 2em);
+    
+  }
+
+  .col-header-main {
+    flex: 6 0 0;
+  }
+  .col-header-side {
+    flex: 1 0 0;
   }
 
 }
 @media screen and (max-width: $small) {
-  
+  .col-header-main {
+    flex: 16 0 0;
+  }
+  .col-header-side {
+    flex: 1 0 0;
+  }
 }
 
 

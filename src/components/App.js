@@ -18,11 +18,11 @@ function App() {
   return (
     <div className="wrapper">
      <header className="header">
-        <div className="col-3">
+        <div className="col-header-main">
           <h1 className="slogan">{data.slogan}</h1>
           <p>{data.subslogan}</p>
         </div>
-        <div className="col-1">
+        <div className="col-header-side">
           <img className="ab-logo" src={hhy} alt="logo" />
         </div>
       </header>
