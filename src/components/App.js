@@ -47,7 +47,7 @@ function App() {
       <span className={`i-inset fal fa-${faBest[getRandomInt(0, faBest.length - 1)]}`} />
         
         <span className="i-inset">VIZ</span>
-        <img className="i-inset" src={crow} alt="crow-icon" width="100px" />
+        <img className="img-inset" src={crow} alt="crow-icon" width="100px" />
         <p className="p-inset">{data.filler}</p>
       </section>
       
