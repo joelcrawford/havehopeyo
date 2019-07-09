@@ -22,7 +22,6 @@ function App() {
   const faBest = ['crow', 'eye',
     'chart-network', 'draw-polygon', 'feather']
 
-                        
   return (
     <div className="wrapper">
 

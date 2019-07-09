@@ -90,6 +90,18 @@ h1 {
   background: $c-bg;
   border: $c-border-test;
   flex-basis: 30%;
+  & > span { 
+    font-size: 3em; 
+    padding-right: 0.3em;
+    letter-spacing: 10px;
+  }
+  .i-inset, .img-inset {
+    padding-right: 0.3em;
+    font-size: 3em;
+    align-items: center;
+    letter-spacing: 10px;
+    font-family: 'Megrim', sans-serif;
+  }
 }
 
 .col-header-main {
@@ -102,14 +114,7 @@ h1 {
   border: $c-border-test2;
 }
 
-.i-inset, .img-inset {
-  //display: inline;
-  padding-right: 0.3em;
-  font-size: 3em;
-  align-items: center;
-  letter-spacing: 10px;
-  font-family: 'Megrim', sans-serif;
-}
+
 .img-inset svg {
   color: $c-text;
   fill: $c-text;
