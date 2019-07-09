@@ -3,7 +3,7 @@ import hhy from '../assets/logo/octahedron.png'
 import '../assets/scss/app.scss'
 import { getRandomInt } from '../store/actions'
 
-import crow from '@fortawesome/fontawesome-pro/svgs/light/crow.svg'
+//import crow from '@fortawesome/fontawesome-pro/svgs/light/crow.svg'
 
 const data = {
   name: 'Have Hope, Yo',
@@ -19,7 +19,7 @@ const data = {
 }
 
 function App() {
-  const faBest = ['crow', 'hat-wizard', 'eye',
+  const faBest = ['crow', 'eye',
     'chart-network', 'draw-polygon', 'feather']
 
                         
@@ -37,18 +37,14 @@ function App() {
       </header>
 
       <section className="banner"></section>
-      <section className="l20">
-        <span className={`i-inset fal fa-${faBest[getRandomInt(0, faBest.length - 1)]}`} />
-        <span className={`i-inset fal fa-crow`} />
-        
+      <section className="f-items">
+        <span className={`fal fa-${faBest[getRandomInt(0, faBest.length - 1)]}`} />
         <span className="i-inset">DATA</span>
         <p className="p-inset">{data.filler}</p> 
       </section>
-      <section className="l20">
-      <span className={`i-inset fal fa-${faBest[getRandomInt(0, faBest.length - 1)]}`} />
-        
+      <section className="f-items">
+      <span className={`fal fa-${faBest[getRandomInt(0, faBest.length - 1)]}`} />
         <span className="i-inset">VIZ</span>
-        <img className="img-inset" src={crow} alt="crow-icon" width="100px" />
         <p className="p-inset">{data.filler}</p>
       </section>
       
