@@ -3,6 +3,8 @@ import hhy from '../assets/logo/octahedron.png'
 import '../assets/scss/app.scss'
 import { getRandomInt } from '../store/actions'
 
+import crow from '@fortawesome/fontawesome-pro/svgs/light/crow.svg'
+
 const data = {
   name: 'Have Hope, Yo',
   slogan: `As ordinary as it all appears...`,
@@ -19,7 +21,7 @@ const data = {
 function App() {
   const faBest = ['crow', 'hat-wizard', 'eye',
     'chart-network', 'draw-polygon', 'feather']
-  let f = faBest[getRandomInt(0, faBest.length - 1)]
+
                         
   return (
     <div className="wrapper">
@@ -45,6 +47,7 @@ function App() {
       <span className={`i-inset fal fa-${faBest[getRandomInt(0, faBest.length - 1)]}`} />
         
         <span className="i-inset">VIZ</span>
+        <img className="i-inset" src={crow} alt="crow-icon" width="100px" />
         <p className="p-inset">{data.filler}</p>
       </section>
       
