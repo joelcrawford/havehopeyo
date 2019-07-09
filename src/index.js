@@ -8,7 +8,7 @@ import App from './components/App'
 import * as serviceWorker from './serviceWorker'
 
 import '@fortawesome/fontawesome-pro/css/fontawesome.min.css'
-import '@fortawesome/fontawesome-pro/css/all.min.css'
+import '@fortawesome/fontawesome-pro/css/light.min.css'
 
 
 ReactDOM.render(<App />, document.getElementById('root'))
