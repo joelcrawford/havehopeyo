@@ -39,6 +39,7 @@ function App() {
       <section className="banner"></section>
       <section className="l20">
         <span className={`i-inset fal fa-${faBest[getRandomInt(0, faBest.length - 1)]}`} />
+        <span className={`i-inset fal fa-crow`} />
         
         <span className="i-inset">DATA</span>
         <p className="p-inset">{data.filler}</p> 
