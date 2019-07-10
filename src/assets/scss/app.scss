@@ -48,7 +48,6 @@ h1 {
     }
     .ab-logo {
         position: absolute;
-
         bottom: -44px; /* top: -58px; */
         width: 100px;
         right: 56px;
@@ -109,6 +108,7 @@ h1 {
 .container {
     flex: 1 100%;
     display: flex;
+    background: $c-bg;
     .f-items {
         background: $c-bg;
         border: 1px dashed $c-bg-deep;
