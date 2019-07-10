@@ -4,6 +4,11 @@
 /node_modules
 /.pnp
 .pnp.js
+.eslintrc
+.prettierrc
+
+
+/src/store/config.js
 
 # testing
 /coverage
