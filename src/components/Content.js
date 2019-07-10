@@ -12,8 +12,8 @@ const data = {
 
 export default () => {
     return (
-        <React.Fragment>
-            <section className="f-items">
+        <section className="container">
+            <div className="f-items">
                 <span
                     className={`fal fa-${
                         faBest[getRandomInt(0, faBest.length - 1)]
@@ -21,8 +21,8 @@ export default () => {
                 />
                 <span className="i-inset">TRANSFORM</span>
                 <p className="p-inset">{data.filler}</p>
-            </section>
-            <section className="f-items">
+            </div>
+            <div className="f-items">
                 <span className="i-inset">EXPLORE</span>
                 <span
                     className={`fal fa-${
@@ -30,8 +30,8 @@ export default () => {
                     }`}
                 />
                 <p className="p-inset">{data.filler}</p>
-            </section>
-            <section className="f-items">
+            </div>
+            <div className="f-items">
                 <span
                     className={`fal fa-${
                         faBest[getRandomInt(0, faBest.length - 1)]
@@ -39,7 +39,7 @@ export default () => {
                 />
                 <span className="i-inset">OFFER</span>
                 <p className="p-inset">{data.filler}</p>
-            </section>
-        </React.Fragment>
+            </div>
+        </section>
     )
 }

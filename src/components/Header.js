@@ -9,47 +9,22 @@ const data = {
     subslogan2: `Knowledge creates better people, better relationships, better organizations.`,
 }
 
-class Header extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            offset: 0,
-        }
-    }
+export default () => {
+    return (
+        <React.Fragment>
+            <header className="header">
+                <div className="col-header-main">
+                    <h1 className="slogan">{data.slogan}</h1>
+                    <p>{data.subslogan}</p>
+                </div>
+                <div className="col-header-side">
+                    <img className="ab-logo" src={hhy} alt="logo" />
+                </div>
+            </header>
 
-    componentDidMount() {
-        window.addEventListener('scroll', this.parallaxShift)
-    }
+            {/* <section className="banner-window"></section> */}
 
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.parallaxShift)
-    }
-
-    parallaxShift = () => {
-        this.setState({
-            offset: window.pageYOffset,
-        })
-    }
-
-    render() {
-        return (
-            <React.Fragment>
-                <header
-                    style={{ backgroundPositionY: this.state.offset / 2 }}
-                    className="header"
-                >
-                    <div className="col-header-main">
-                        <h1 className="slogan">{data.slogan}</h1>
-                        <p>{data.subslogan}</p>
-                    </div>
-                    <div className="col-header-side">
-                        <img className="ab-logo" src={hhy} alt="logo" />
-                    </div>
-                </header>
-                <section className="banner"></section>
-            </React.Fragment>
-        )
-    }
+            <section className="banner"></section>
+        </React.Fragment>
+    )
 }
-
-export default Header

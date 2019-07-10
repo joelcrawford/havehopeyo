@@ -25,7 +25,6 @@ h1 {
 }
 
 .wrapper > * {
-    //padding: 1em;
     flex: 1 100%;
 }
 
@@ -42,12 +41,14 @@ h1 {
     display: flex;
     background: $c-bg;
     border: $c-border-test;
+    border-bottom: 0.2em solid $c-highlight;
     position: relative;
     p {
         font-size: 1.6em;
     }
     .ab-logo {
         position: absolute;
+
         bottom: -44px; /* top: -58px; */
         width: 100px;
         right: 56px;
@@ -56,13 +57,28 @@ h1 {
     }
 }
 
+// .banner {
+//     background: url($url-banner);
+//     background-size: cover;
+//     min-height: 100vh;
+//     background-position: center bottom;
+//     border-bottom: 0.2em solid $c-highlight;
+//     border-top: 0.2em solid $c-highlight;
+// }
+.banner-window {
+    min-height: 100vh;
+
+    background: transparent;
+    background-size: cover;
+    border: 3px solid #ff0000;
+    overflow: visible;
+}
 .banner {
     background: url($url-banner);
     background-size: cover;
     min-height: 100vh;
-    background-position: center bottom;
+    background-position: center top;
     border-bottom: 0.2em solid $c-highlight;
-    border-top: 0.2em solid $c-highlight;
 }
 
 .footer {
@@ -89,12 +105,17 @@ h1 {
     background: $c-bg;
     border: $c-border-test2;
 }
-.f-items {
-    background: $c-bg;
-    border: 1px dashed $c-bg-deep;
-    flex-basis: 32%;
-    margin: 1em;
-    flex: 3;
+
+.container {
+    flex: 1 100%;
+    display: flex;
+    .f-items {
+        background: $c-bg;
+        border: 1px dashed $c-bg-deep;
+        flex-basis: 32%;
+        flex: 3;
+        margin: 1em;
+    }
     & > span {
         font-size: 1.5em;
         padding-right: 0.3em;
