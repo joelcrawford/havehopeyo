@@ -3,6 +3,8 @@ import hhy from '../assets/logo/octahedron.png'
 import '../assets/scss/app.scss'
 import { getRandomInt } from '../store/actions'
 
+import Footer from './Footer'
+
 //import crow from '@fortawesome/fontawesome-pro/svgs/light/crow.svg'
 
 const data = {
@@ -38,12 +40,17 @@ function App() {
       <section className="banner"></section>
       <section className="f-items">
         <span className={`fal fa-${faBest[getRandomInt(0, faBest.length - 1)]}`} />
-        <span className="i-inset">DATA</span>
+        <span className="i-inset">TRANSFORM</span>
+        <p className="p-inset">{data.filler}</p> 
+      </section>
+      <section className="f-items">
+        <span className="i-inset">EXPLORE</span>
+        <span className={`fal fa-${faBest[getRandomInt(0, faBest.length - 1)]}`} />
         <p className="p-inset">{data.filler}</p> 
       </section>
       <section className="f-items">
       <span className={`fal fa-${faBest[getRandomInt(0, faBest.length - 1)]}`} />
-        <span className="i-inset">VIZ</span>
+        <span className="i-inset">OFFER</span>
         <p className="p-inset">{data.filler}</p>
       </section>
       
@@ -56,11 +63,7 @@ function App() {
         <p>{data.filler}</p> 
       </section> */}
 
-      <footer className="footer">
-        <div className="col-primary">
-        <p>&copy; {data.footer}</p> 
-        </div>
-      </footer>
+      <Footer data={data.footer} />
 
     </div>
   )

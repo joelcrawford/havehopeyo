@@ -1,0 +1,35 @@
+@import 'app-vars.scss';
+
+footer {
+    min-height: 30vh;
+}
+a {
+    color: $c-text-light;
+    transition: 300ms color ease-in-out;
+    margin-bottom: 1em;
+    &:hover {
+        color: $c-text-hover;
+    }
+    &:active {
+        color: $c-text-hover;
+    }
+}
+.social-icons {
+    span {
+        font-size: 1.6em;
+        border: 1px dashed $c-text-hover;
+        padding: 0.3em;
+        transition: background-color 300ms ease-in-out;
+        &:hover {
+            background-color: $c-text-light;
+            
+        }
+    }
+    a {
+        text-decoration: none;
+        margin: 1em;
+    }
+}
+.icon-text {
+    letter-spacing: 0.1em;
+}
