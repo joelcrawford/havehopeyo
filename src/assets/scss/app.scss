@@ -1,198 +1,201 @@
 @import './app-vars.scss';
 
 body {
-  padding: $pad-body;
-  background: $c-bg-deep;
-  font-family: 'Noto Sans', 'Noto Serif', serif;
-  text-align: left;
-  color: $c-text;
-
+    padding: $pad-body;
+    background: $c-bg-deep;
+    font-family: 'Noto Sans', 'Noto Serif', serif;
+    text-align: left;
+    color: $c-text;
 }
 h1 {
-  color: $c-text-header;
-  font-size: 6em;
-  &.slogan {
-    margin-top: 0.2em;
-  }
-  letter-spacing: 3px;
-  font-family: 'Noto Serif';
+    color: $c-text-header;
+    font-size: 6em;
+    &.slogan {
+        margin-top: 0.2em;
+    }
+    letter-spacing: 3px;
+    font-family: 'Noto Serif';
 }
 .wrapper {
-  display: flex;  
-  flex-flow: wrap;
-  flex-direction: row;
-  flex-grow: 1;
-  min-height: calc(100vh - 0.8em);
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    flex-grow: 1;
+    min-height: calc(100vh - 0.8em);
 }
 
 .wrapper > * {
-  //padding: 1em;
-  flex: 1 100%;
+    //padding: 1em;
+    flex: 1 100%;
 }
 
-.col-header-main, .col-header-side, .f-items, .col-primary, .col-secondary {
-  padding: $pad-desk;
+.col-header-main,
+.col-header-side,
+.f-items,
+.col-primary,
+.col-secondary {
+    padding: $pad-desk;
 }
 
 .header {
-  flex: 1 100%;
-  display: flex;
-  background: $c-bg;
-  border: $c-border-test;
-  position: relative;
-  p {
-    font-size: 1.6em;
-  }
-  .ab-logo {
-    position: absolute;
-    bottom: -44px; /* top: -58px; */ 
-    width: 100px;
-    right: 56px;
-    -webkit-filter: drop-shadow(5px 5px 5px #222);
-    filter: drop-shadow(5px 5px 5px #222);
-  }
+    flex: 1 100%;
+    display: flex;
+    background: $c-bg;
+    border: $c-border-test;
+    position: relative;
+    p {
+        font-size: 1.6em;
+    }
+    .ab-logo {
+        position: absolute;
+        bottom: -44px; /* top: -58px; */
+        width: 100px;
+        right: 56px;
+        -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter: drop-shadow(5px 5px 5px #222);
+    }
 }
 
 .banner {
-  background: url($url-banner);
-  background-size: cover;
-  min-height: 80vh;
-  background-position: center center;
-  border-bottom: 0.2em solid $c-highlight;
-  border-top: 0.2em solid $c-highlight;
+    background: url($url-banner);
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center bottom;
+    border-bottom: 0.2em solid $c-highlight;
+    border-top: 0.2em solid $c-highlight;
 }
 
 .footer {
-  border-top: 0.2em solid $c-highlight;
-  order: 3;
-  font-size: 0.8em;
-  letter-spacing: 0.04em;
-  > .col-primary {
-    background: $c-bg-deep;
-    color: $c-text-light;
-  }
+    border-top: 0.2em solid $c-highlight;
+    order: 3;
+    font-size: 0.8em;
+    letter-spacing: 0.04em;
+    > .col-primary {
+        background: $c-bg-deep;
+        color: $c-text-light;
+    }
 }
 
 .col-primary {
-  flex: 3 0px;
-  order: 1;
-  background: $c-bg;
-  border: $c-border-test;
+    flex: 3 0px;
+    order: 1;
+    background: $c-bg;
+    border: $c-border-test;
 }
 
 .col-secondary {
-  order: 2;
-  flex: 3 0 0;
-  background: $c-bg;
-  border: $c-border-test2;
+    order: 2;
+    flex: 3 0 0;
+    background: $c-bg;
+    border: $c-border-test2;
 }
 .f-items {
-  background: $c-bg;
-  border: $c-border-test;
-  flex-basis: 32%;
-  flex: 3;
-  & > span { 
-    font-size: 1.5em; 
-    padding-right: 0.3em;
-    letter-spacing: 10px;
-  }
-  .i-inset, .img-inset {
-    padding-right: 0.3em;
-    font-size: 1.4em;
-    align-items: center;
-    float: left;
-    letter-spacing: 10px;
-    font-family: 'Megrim', sans-serif;
-  }
+    background: $c-bg;
+    border: 1px dashed $c-bg-deep;
+    flex-basis: 32%;
+    margin: 1em;
+    flex: 3;
+    & > span {
+        font-size: 1.5em;
+        padding-right: 0.3em;
+        letter-spacing: 10px;
+    }
+    .i-inset,
+    .img-inset {
+        padding-right: 0.3em;
+        font-size: 1.4em;
+        align-items: center;
+        float: left;
+        letter-spacing: 10px;
+        font-family: 'Megrim', sans-serif;
+    }
 }
 
 .col-header-main {
-  flex: 4 0 0;
-  border: $c-border-test;
+    flex: 4 0 0;
+    border: $c-border-test;
 }
 
 .col-header-side {
-  flex: 1 0 0;
-  border: $c-border-test2;
+    flex: 1 0 0;
+    border: $c-border-test2;
 }
-
 
 .img-inset svg {
-  color: $c-text;
-  fill: $c-text;
+    color: $c-text;
+    fill: $c-text;
 }
 .p-inset {
-  //display: inline;
-  letter-spacing: 0.02em;
-  & > span {
-    
-    font-size: 1em;
-    letter-spacing: 10px;
-  }
+    //display: inline;
+    letter-spacing: 0.02em;
+    & > span {
+        font-size: 1em;
+        letter-spacing: 10px;
+    }
 }
 
 @media screen and (max-width: $xlarge) {
-  h1 {
-    font-size: 4.6em;
-  }
+    h1 {
+        font-size: 4.6em;
+    }
 }
 
 @media screen and (max-width: $large) {
-  h1 {
-    font-size: 3em;
-  }
-  .header {
-    p {
-      font-size: 1.2em;
+    h1 {
+        font-size: 3em;
     }
-  }
-  .f-items {
-    flex-basis: calc(40% - 2em); 
-  }
+    .header {
+        p {
+            font-size: 1.2em;
+        }
+    }
+    .f-items {
+        flex-basis: calc(40% - 2em);
+    }
 }
 
 @media screen and (max-width: $medium) {
-  h1 {
-    font-size: 1.6em;
-  }
-  .header {
-    p {
-      font-size: 1em;
+    h1 {
+        font-size: 1.6em;
     }
-    .ab-logo {
-      position: absolute;
-      bottom: -36px; /* top: -58px; */ 
-      width: 80px;
-      right: 16px;
-      -webkit-filter: drop-shadow(3px 3px 3px #222);
-      filter: drop-shadow(3px 3px 3px #222);
+    .header {
+        p {
+            font-size: 1em;
+        }
+        .ab-logo {
+            position: absolute;
+            bottom: -36px; /* top: -58px; */
+            width: 80px;
+            right: 16px;
+            -webkit-filter: drop-shadow(3px 3px 3px #222);
+            filter: drop-shadow(3px 3px 3px #222);
+        }
     }
-  }
-  .col-header-main, .col-header-side, .f-items, .col-primary, .col-secondary {
-    padding: $pad-mobile;
-    
-  }
-  .col-secondary, .col-primary, .f-items {
-    flex-basis: calc(100% - 2em);
-    
-  }
+    .col-header-main,
+    .col-header-side,
+    .f-items,
+    .col-primary,
+    .col-secondary {
+        padding: $pad-mobile;
+    }
+    .col-secondary,
+    .col-primary,
+    .f-items {
+        flex-basis: calc(100% - 2em);
+    }
 
-  .col-header-main {
-    flex: 6 0 0;
-  }
-  .col-header-side {
-    flex: 1 0 0;
-  }
-
+    .col-header-main {
+        flex: 6 0 0;
+    }
+    .col-header-side {
+        flex: 1 0 0;
+    }
 }
 @media screen and (max-width: $small) {
-  .col-header-main {
-    flex: 16 0 0;
-  }
-  .col-header-side {
-    flex: 1 0 0;
-  }
+    .col-header-main {
+        flex: 16 0 0;
+    }
+    .col-header-side {
+        flex: 1 0 0;
+    }
 }
-
-
-

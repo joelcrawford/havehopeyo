@@ -2,35 +2,32 @@ import React from 'react'
 import '../assets/scss/footer.scss'
 import { config } from '../store/config'
 
-function handleClick (to, e) {
-    console.log(to, e)
-
+const data = {
+    footer: '2015 Have Hope Yo',
 }
-export default({data}) => {
+
+export default () => {
     return (
         <footer className="footer">
             <div className="col-primary">
-                
                 <div className="social-icons">
-                    
-                    <a 
+                    <a
                         href={`mailto:${config.links.email}`}
                         target="_blank"
-                        rel="noreferrer noopener">
+                        rel="noreferrer noopener"
+                    >
                         <span className="fal fa-paper-plane" />
-                        
                     </a>
-                    <a 
+                    <a
                         href={config.links.linkedin}
                         target="_blank"
-                        rel="noreferrer noopener">
+                        rel="noreferrer noopener"
+                    >
                         <span className="fab fa-linkedin-in" />
                     </a>
-                    
-                </div> 
-                <p style={{float: 'left'}}>&copy; {data}</p> 
+                </div>
+                <p style={{ float: 'left' }}>&copy; {data.footer}</p>
             </div>
-      </footer>
+        </footer>
     )
 }
-    
